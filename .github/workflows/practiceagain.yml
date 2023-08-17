@@ -4,20 +4,16 @@ on: push
 
 jobs:
   job1:
-    print_date:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Print Curent Date
-        run: |
-          echo "Current date is $(date)"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Print Curent Date
+        run: echo "Current date is $(date)"
   job2:
-    print_date: 
-     runs-on: windows-latest
-     steps:
-     - name: Checkout Code
-       uses: actions/checkout@v2
-     - name: Print date
-       run: |
-         echo " Date is $(date)"
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Print date
+      run: echo " Date is $(date)"
